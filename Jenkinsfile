@@ -26,17 +26,17 @@ pipeline {
                     echo 'Now Archiving...'
                     archiveArtifacts artifacts: '**/target/*.war'
                 }
+            }
         }
-        stage ('test'){
+        stage('test') {
             steps {
                 sh 'mvn -s settings.xml test'
             }
         }
-        stage ('checkstyle Analysis') {
+        stage('checkstyle Analysis') {
             steps {
                 sh 'mvn -s settings.xml checkstyle:checkstyle' 
             }
         }
     }
-}
 }
