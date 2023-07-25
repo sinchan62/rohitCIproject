@@ -27,6 +27,16 @@ pipeline {
                     archiveArtifacts artifacts: '**/target/*.war'
                 }
         }
+        stage ('test'){
+            steps {
+                sh 'mvn -s settings.xml test'
+            }
+        }
+        stage ('checkstyle Analysis') {
+            steps {
+                sh 'mvn -s settings.xml checkstyle:checkstyle' 
+            }
+        }
     }
 }
 }
