@@ -5,7 +5,7 @@ pipeline {
         maven "MAVEN3"
     }
     environment {
-        JAVA_HOME = "${tool 'OracleJDK8'}"
+        JAVA_HOME = '/usr/lib/jvm/java-1.8.0-openjdk-amd64'
         SNAP_REPO = 'vprofile-snapshot'
         NEXUS_USER = 'admin'
         NEXUS_PASS = 'admin123'
