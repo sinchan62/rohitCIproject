@@ -1,5 +1,5 @@
 
-# Continuous Integration using Jenkins, Nexus ,Sonarqube.
+# Continuous Integration using Jenkins,Nexus and Sonarqube.
 
 The vprofile web application is continuously integrated using Jenkins, SonarQube, and Nexus using a declarative Jenkins pipeline and  stage of the continuous integration process is integrated through a Slack channel for each  stage outcome notification.
 
